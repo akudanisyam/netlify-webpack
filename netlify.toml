@@ -1,0 +1,13 @@
+[build]
+    functions = 'functions'
+    command = "yarn build"
+
+[dev]
+    functions = "functions"
+    port = 3000
+    targetPort = 9000
+
+[[redirects]]
+    from = "/api/*"
+    to = "/.netlify/functions/:splat"
+    status = 200
